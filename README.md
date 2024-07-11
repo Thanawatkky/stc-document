@@ -1,2 +1,5 @@
 Welcome to document system 
-Log
+How to login?
+username: admin 
+password: 1234
+
