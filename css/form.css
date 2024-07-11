@@ -1,0 +1,95 @@
+.container{
+    margin: auto auto;
+    width: 800px;
+    height: 100%;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 1%;
+    box-shadow: 1px 1px 1px rgb(201, 201, 201);
+
+}
+.container-login{
+    margin: 5.5rem auto;
+    width: 800px;
+    height: 100%;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 1%;
+    box-shadow: 1px 1px 1px rgb(201, 201, 201);
+
+}
+.bg-purple{
+    background-color: #d39cff;
+    width: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+#txt_title{
+    color: white;
+    padding: 0 2rem;
+    display: block;
+    margin: auto;
+    background-color: darkblue;
+    box-shadow: 1px 1px 1px darkblue;
+    border-radius: 50%;
+}
+input{
+    display: block;
+    margin: 2rem 0;
+    height: 2rem;
+    width: 16rem;
+    border: 1px solid#959595;
+    border-radius: 10px;
+    padding: 0 1rem;
+}
+p#alt_msg1, p#alt_msg2{
+    display: block;
+    position: absolute;
+    top: 20px;
+    left:10px;
+    margin-top: 0.5rem 0;
+    color: rgb(255, 0, 0);
+}
+
+#btn-submit{
+    background-color: blue;
+    color: white;
+    width: 4rem;
+    height: 2rem;
+    border: 1px solid white;
+    border-radius: 100px;
+}
+#btn-submit:disabled{
+    background-color: rgb(163, 164, 255);
+}
+#btn-submit:hover{
+    background-color: skyblue;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.wrapper{
+    margin: 2rem auto;
+    padding: auto;
+}
+.form-group{
+    position: relative;
+}
+label{
+    position: absolute;
+    top: 0.5rem;
+    left: 1.2rem;
+    color: rgba(0, 0, 0, 0.5);
+    transition: 0.4s all;
+    padding-inline: 0.25rem;
+}
+.text-end {
+    text-align: center;
+}
+input:focus~label,
+input:valid~label{
+    top: -0.5rem;
+    left: 0.5rem;
+    background-color: #fff;
+    font-size: 1rem;
+}

@@ -1,0 +1,546 @@
+/*----------------------------------- start layout setting-------------------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+header{
+    display: flex;
+    background-color: #ffffff;
+    border: 1px solid darkgray;
+    box-shadow: 1px 1px 1px darkgray;
+    border-top: 0;
+    border-right: 0;
+    padding: 2rem;
+    text-align: start;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+   
+}
+#logout:hover{
+    color: lightgray;
+
+}
+#logout{
+    text-decoration: none;
+     color: black;
+
+}
+header > .logo{
+    background-color: darkblue;
+    width: 30px;
+    color: white;
+    text-align: center;
+    border-radius: 100%;
+    margin: 0 0.5rem;
+}
+.container{
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    gap: 2rem;
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+main.content{
+    /* width: 1200px; */
+    padding: 1rem 0;
+    overflow-y: hidden;
+    flex-grow: 1;
+    height: 800px;
+}
+.side-left{
+    background-color: rgb(115, 88, 167);
+    border: 1px;
+    height: 100%;
+    padding: 1rem 0;
+    border: 1px solid darkgrey;
+    box-shadow: 1px 1px 1px darkgray;
+
+
+}
+a.side-link{
+    width: 100%;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.side-right{
+    padding: 1rem 0;
+}
+.side-list:hover{
+    background-color: rgb(255, 255, 255);
+    & .side-link{
+        color: black;
+    }
+}
+.side-list{
+    display: flex;
+    justify-content: start;
+    list-style: none;
+    padding: 1rem;
+    padding-left: 1rem;
+}
+footer{
+    background-color: white;
+    border-top: 1px solid darkgray;
+    text-align: center;
+    padding: 1rem;
+}
+/*----------------------------------- end layout setting -------------------------------------- */
+/* ---------------start card ------------------------------------- */
+.card{
+    /* height: 100%; */
+    border: 1px solid black ;
+    text-align: center;
+    padding: 2rem 0;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px darkgray;
+   margin: 1rem 1rem;
+}
+.card-title{
+    padding: 0.5rem;
+}
+.card-body{
+    padding: 1rem;
+}
+/* ---------------------------------------end --------------------------------------------------- */
+.wrapper-img{
+    display: block;
+    margin: auto auto;
+}
+.wrapper-header{
+    padding: 1rem;
+}
+
+table {
+    margin: 1rem 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table > thead{
+    background-color: rgb(255, 159, 159);
+}
+thead > tr > th{
+    color: white;
+    padding: 0.5rem;
+    /* border: 1px solid black; */
+}
+
+table > tbody{
+    padding: 1rem 0;
+    text-align: center;
+}
+table > tbody > tr > td{
+    padding: 1rem 0;
+}
+table > tbody > tr {
+    border-bottom: 1px solid black;
+    padding: 1rem 0;
+}
+.btn-primary{
+    text-decoration: none;
+    background-color: white;
+    color: rgb(40, 36, 255);
+    padding: 0.8rem;
+    border:1px solid rgb(40, 36, 255);
+    border-radius: 10px;
+}
+.btn-success{
+    text-decoration: none;
+    background-color: white;
+    color: rgb(3, 179, 59);
+    padding: 0.8rem;
+    border:1px solid rgb(3, 179, 59);
+    border-radius: 8px;
+}
+.btn-danger{
+    text-decoration: none;
+    background-color: white;
+    color: rgb(255, 65, 65);
+    padding: 0.8rem;
+    border:1px solid rgb(255, 65, 65);
+    border-radius: 8px;
+}
+.btn-secondary{
+    text-decoration: none;
+    background-color: white;
+    color: rgb(173, 173, 173);
+    padding: 0.8rem;
+    border:1px solid rgb(54, 52, 52);
+    border-radius: 8px;
+}
+.btn-primary:hover{
+   background-color: rgb(40, 36, 255);
+   color: white;
+   cursor: pointer;
+}
+.btn-success:hover{
+   background-color: rgb(3, 179, 59);
+   color: white;
+   cursor: pointer;
+}
+.btn-danger:hover{
+   background-color: rgb(255, 65, 65);
+   color: white;
+   cursor: pointer;
+}
+.btn-secondary:hover{
+   background-color: rgb(173, 173, 173);
+   color: white;
+   cursor: pointer;
+}
+
+.table-title {
+    text-align: center;
+    padding: 1rem;
+    
+}
+input#owner{
+    width: 500px;
+    height: 2rem;
+    border-radius: 2px;
+    border: 1px solid gray ;
+    padding: 1rem;
+}
+input#file{
+    width: 500px;
+    /* padding: 1rem;
+    margin-left: 1rem ; */
+    
+}
+input#fname, input#lname, input#username{
+    width: 350px;
+    height: 2rem;
+    border-radius: 2px;
+    border: 1px solid gray ;
+    padding: 1rem;
+}
+input#username{
+    margin-left: 0.6rem;
+}
+input#fname{
+    margin-left: 2.3rem;
+}
+.add-title{
+    text-wrap: wrap;
+    padding-bottom: 2rem;
+}
+.form-group{
+    position: relative;
+    margin: 2rem 0;
+}
+label.form-label{
+    position: absolute;
+    top: 0.5rem;
+    left:17rem;
+    color: rgba(0, 0, 0, 0.5);
+    padding-inline: 0.25rem;
+    transition: 0.4s all;
+}
+input:focus~label,
+input:valid~label{
+    top: -0.5rem;
+    /* left: 0.5rem; */
+    background-color: #fff;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 1600px) {
+    label{
+        position: absolute;
+        top: 0.5rem;
+        left:34rem;
+        color: rgba(0, 0, 0, 0.5);
+        padding-inline: 0.25rem;
+        transition: 0.4s all;
+    }
+}
+label[for="username"],label[for="fname"],label[for="lname"] {
+    margin-right: 1rem;
+}
+.text-start{
+    text-align: start;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    background-color: #ffffff;
+    border: 1px solid darkgray;
+    box-shadow: 1px 1px 1px darkgray;
+    border-top: 0;
+    border-right: 0;
+    padding: 2rem;
+    text-align: start;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    justify-content: space-between;
+   
+}
+
+header > .logo{
+    background-color: darkblue;
+    width: 30px;
+    color: white;
+    text-align: center;
+    border-radius: 100%;
+    margin: 0 0.5rem;
+}
+.container{
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    gap: 2rem;
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+main.content{
+    /* width: 1200px; */
+    padding: 1rem 0;
+    overflow-y: hidden;
+    flex-grow: 1;
+    height: 800px;
+}
+.side-left{
+    background-color: rgb(115, 88, 167);
+    border: 1px;
+    height: 100%;
+    padding: 1rem 0;
+    border: 1px solid darkgrey;
+    box-shadow: 1px 1px 1px darkgray;
+
+
+}
+a.side-link{
+    width: 100%;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.side-right{
+    padding: 1rem 0;
+}
+.side-list:hover{
+    background-color: rgb(255, 255, 255);
+    & .side-link{
+        color: black;
+    }
+}
+.side-list{
+    display: flex;
+    justify-content: start;
+    list-style: none;
+    padding: 1rem;
+    padding-left: 1rem;
+}
+footer{
+    background-color: white;
+    border-top: 1px solid darkgray;
+    text-align: center;
+    padding: 1rem;
+}
+/*----------------------------------- end layout setting -------------------------------------- */
+/* ---------------start card ------------------------------------- */
+.card{
+    /* height: 100%; */
+    border: 1px solid black ;
+    text-align: center;
+    padding: 2rem 0;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px darkgray;
+   margin: 1rem 1rem;
+}
+.card-title{
+    padding: 0.5rem;
+}
+.card-body{
+    padding: 1rem;
+}
+/* ---------------------------------------end --------------------------------------------------- */
+.wrapper-img{
+    display: block;
+    margin: auto auto;
+}
+.wrapper-header{
+    padding: 1rem;
+}
+
+table {
+    margin: 1rem 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table > thead{
+    background-color: rgb(255, 159, 159);
+}
+thead > tr > th{
+    color: white;
+    padding: 0.5rem;
+    /* border: 1px solid black; */
+}
+
+table > tbody{
+    padding: 1rem 0;
+    text-align: center;
+}
+table > tbody > tr > td{
+    padding: 1rem 0;
+}
+table > tbody > tr {
+    border-bottom: 1px solid black;
+    padding: 1rem 0;
+}
+.btn-primary{
+    text-decoration: none;
+    background-color: white;
+    color: rgb(40, 36, 255);
+    padding: 0.8rem;
+    border:1px solid rgb(40, 36, 255);
+    border-radius: 10px;
+}
+.btn-success{
+    text-decoration: none;
+    background-color: white;
+    color: rgb(3, 179, 59);
+    padding: 0.8rem;
+    border:1px solid rgb(3, 179, 59);
+    border-radius: 8px;
+}
+.btn-danger{
+    text-decoration: none;
+    background-color: white;
+    color: rgb(255, 65, 65);
+    padding: 0.8rem;
+    border:1px solid rgb(255, 65, 65);
+    border-radius: 8px;
+}
+.btn-secondary{
+    text-decoration: none;
+    background-color: white;
+    color: rgb(173, 173, 173);
+    padding: 0.8rem;
+    border:1px solid rgb(54, 52, 52);
+    border-radius: 8px;
+}
+.btn-primary:hover{
+   background-color: rgb(40, 36, 255);
+   color: white;
+   cursor: pointer;
+}
+.btn-success:hover{
+   background-color: rgb(3, 179, 59);
+   color: white;
+   cursor: pointer;
+}
+.btn-danger:hover{
+   background-color: rgb(255, 65, 65);
+   color: white;
+   cursor: pointer;
+}
+.btn-secondary:hover{
+   background-color: rgb(173, 173, 173);
+   color: white;
+   cursor: pointer;
+}
+
+.table-title {
+    text-align: center;
+    padding: 1rem;
+    
+}
+input#owner{
+    width: 500px;
+    height: 2rem;
+    border-radius: 2px;
+    border: 1px solid gray ;
+    padding: 1rem;
+}
+input#file{
+    width: 500px;
+    /* padding: 1rem;
+    margin-left: 1rem ; */
+    
+}
+input#fname, input#lname, input#username{
+    width: 300px;
+    height: 2rem;
+    border-radius: 2px;
+    border: 1px solid gray ;
+    padding: 1rem;
+}
+input#username{
+    margin-left: 0.6rem;
+}
+input#fname{
+    margin-left: 2.3rem;
+}
+input#current_password, input#new_password, input#confirm_password{
+    width: 300px;
+    height: 2rem;
+    border-radius: 2px;
+    border: 1px solid gray ;
+    padding: 1rem;
+}
+
+.add-title{
+    text-wrap: wrap;
+    padding-bottom: 2rem;
+}
+.form-group{
+    position: relative;
+    margin: 2rem 0;
+}
+label[for="owner"] {
+    position: absolute;
+    top: 0.5rem;
+    left:17rem;
+    color: rgba(0, 0, 0, 0.5);
+    padding-inline: 0.25rem;
+    transition: 0.4s all;
+}
+input#owner:focus~label[for="owner"],
+input#owner:valid~label[for="owner"] {
+    top: -0.5rem;
+    /* left: 0.5rem; */
+    background-color: #fff;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 1600px) {
+    label[for="owner"]{
+        position: absolute;
+        top: 0.5rem;
+        left:34rem;
+        color: rgba(0, 0, 0, 0.5);
+        padding-inline: 0.25rem;
+        transition: 0.4s all;
+    }
+    
+}
+label[for="username"],label[for="fname"],label[for="lname"] {
+    margin-right: 1rem;
+}
+.text-start{
+    text-align: start;
+}
+.text-end{
+    text-align: end;
+}
+.text-center{
+    text-align: center;
+}
+.user-profile{
+    padding: 1rem 0.5rem;
+    font-size: larger;
+    font-family: sans-serif;
+    
+}

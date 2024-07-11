@@ -1,0 +1,35 @@
+.col-12{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+.col-6{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.col-4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+.col-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+.col-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+.col-8{
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 2rem;
+}
+.col{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 2rem;
+}
