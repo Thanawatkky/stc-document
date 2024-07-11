@@ -1,1 +1,0 @@
-<footer>&copy; Copyrigth 2024</footer>
