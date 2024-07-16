@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2024 at 04:09 AM
+-- Generation Time: Jul 16, 2024 at 05:01 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_document`
+-- Database: `db_docfinal`
 --
 
 -- --------------------------------------------------------
@@ -29,8 +29,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tb_document` (
   `doc_id` int(11) NOT NULL,
-  `owner` varchar(255) NOT NULL,
+  `owner` int(11) DEFAULT NULL,
+  `sender` int(11) NOT NULL,
   `doc_name` varchar(255) NOT NULL,
+  `doc_status` int(11) DEFAULT NULL,
   `create_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `update_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
@@ -47,13 +49,6 @@ CREATE TABLE `tb_login` (
   `password` varchar(255) NOT NULL,
   `login_status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `tb_login`
---
-
-INSERT INTO `tb_login` (`login_id`, `user_id`, `password`, `login_status`) VALUES
-(1, 8, '$2y$10$DFWGYZ.DdNPx6H9xm2/WL.9/3./KyMkEPzLXkLnFGlLuxKr0ENyv2', 1);
 
 -- --------------------------------------------------------
 
@@ -108,19 +103,19 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_document`
 --
 ALTER TABLE `tb_document`
-  MODIFY `doc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `doc_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tb_login`
 --
 ALTER TABLE `tb_login`
-  MODIFY `login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `login_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
