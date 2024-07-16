@@ -199,12 +199,13 @@ table > tbody > tr {
     padding: 1rem;
     
 }
-input#owner{
-    width: 500px;
+select#owner{
+    width: 300px;
     height: 2rem;
     border-radius: 2px;
     border: 1px solid gray ;
-    padding: 1rem;
+    /* padding: 1rem; */
+    color: black;
 }
 input#file{
     width: 500px;
@@ -457,13 +458,7 @@ table > tbody > tr {
     padding: 1rem;
     
 }
-input#owner{
-    width: 500px;
-    height: 2rem;
-    border-radius: 2px;
-    border: 1px solid gray ;
-    padding: 1rem;
-}
+
 input#file{
     width: 500px;
     /* padding: 1rem;
@@ -500,21 +495,10 @@ input#current_password, input#new_password, input#confirm_password{
     margin: 2rem 0;
 }
 label[for="owner"] {
-    position: absolute;
-    top: 0.5rem;
-    left:17rem;
     color: rgba(0, 0, 0, 0.5);
     padding-inline: 0.25rem;
     transition: 0.4s all;
 }
-input#owner:focus~label[for="owner"],
-input#owner:valid~label[for="owner"] {
-    top: -0.5rem;
-    /* left: 0.5rem; */
-    background-color: #fff;
-    font-size: 1rem;
-}
-
 @media screen and (min-width: 1600px) {
     label[for="owner"]{
         position: absolute;
@@ -526,6 +510,7 @@ input#owner:valid~label[for="owner"] {
     }
     
 }
+
 label[for="username"],label[for="fname"],label[for="lname"] {
     margin-right: 1rem;
 }

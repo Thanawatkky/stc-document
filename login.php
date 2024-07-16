@@ -49,7 +49,11 @@
                     let data = JSON.parse(xhr.responseText);
                     if(data.status) {
                         alert(data.msg);
-                        window.location.replace('index.php');
+                        if(data.role == 1) {
+                            window.location.replace('admin/index.php');
+                        }else{
+                            window.location.replace('index.php');
+                        }   
                     }else{
                         alert(data.msg);
                         window.location.reload(true);

@@ -1,3 +1,13 @@
+<?php 
+    session_start();
+    include '../api/connect.php';
+    include '../api/function.php';
+    if(empty($_SESSION['user_id'])) {
+        header("Location: ../login.php");
+    }
+    $sql_user = $conn->query("SELECT * FROM tb_user WHERE user_id='".$_SESSION['user_id']."' ");
+    $fet_user = $sql_user->fetch_object();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,5 +38,7 @@
     <?php 
         include 'footer.php';
     ?>
+    <script src="../js/function.js"></script>
+
 </body>
 </html>
